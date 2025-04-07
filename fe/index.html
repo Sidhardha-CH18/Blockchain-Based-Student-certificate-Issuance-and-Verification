@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    
+</head>
+<body>
+    <h2>Certificate Verification</h2>
+
+    <label for="certificateIdInput">Certificate ID:</label>
+    <input type="text" id="certificateIdInput" placeholder="Enter Certificate ID">
+
+    <label for="institutionPublicKeyInput">Institution Public Key:</label>
+    <input type="text" id="institutionPublicKeyInput" placeholder="Enter Institution Public Key">
+
+    <label for="studentPrivateKeyInput">Student Private Key:</label>
+    <input type="text" id="studentPrivateKeyInput" placeholder="Enter Student Private Key">
+
+    <button id="verifyButton">Verify Certificate</button>
+
+    <h3>Verification Results</h3>
+    <p id="verificationStatusDisplay">Verification Status: Pending...</p>
+    
+    <h4>Certificate Details</h4>
+    <p id="studentIdDisplay"></p>
+    <p id="institutionIdDisplay"></p>
+    <p id="ipfsHashDisplay"></p>
+    <p id="sha256HashDisplay"></p>
+    <p id="signatureDisplay"></p>
+    <p id="encryptedMetadataDisplay"></p>
+    <p id="encryptedAesKeyForMetadataDisplay"></p>
+    <p id="issueTimestampDisplay"></p>
+
+    <h4>Decrypted Certificate Document</h4>
+    <div id="certificateDocumentDisplay"></div>
+    <script src="script.js"></script> </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+</body>
+</html>
