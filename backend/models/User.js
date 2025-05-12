@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     address: { type: String, required: true, unique: true }, // MetaMask Address
     name: { type: String, required: true }, // Account Name (Editable if ENS not available)
     email: { type: String, required: true, unique: true }, // User Email
-    role: { type: String, required: true, enum: ["institution", "student", "verifier"] }, // User Role
+    role: { type: String, required: true, enum: ["Institution", "Student", "Verifier"] }, // User Role
     publicKey: { type: String, required: true }, // Public Key from MetaMask
     createdAt: { type: Date, default: Date.now }
 });
