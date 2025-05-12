@@ -24,7 +24,7 @@ const axios= require("axios");
 const { encode } = require('punycode');
 
 const web3 = new Web3(process.env.SEPOLIA_RPC_URL); 
-const contractAddress = '0x4B389Cd12557f5C27D9990de721463692CcB8A29';
+const contractAddress = process.env.CONTRACT_ADDRESS;
 const contractABI = require("../artifacts/contracts/CertificateAuthority.sol/CertificateAuthority.json").abi;
 const certificateContract = new web3.eth.Contract(contractABI, contractAddress);
 
